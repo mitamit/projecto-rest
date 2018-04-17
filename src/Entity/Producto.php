@@ -13,7 +13,8 @@ class Producto
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @ORM\ManyToOne(targetEntity="App\Entity\LineaComanda", inversedBy="ide_producto")
+     * @ORM\ManyToOne(targetEntity="App\Entity\LineaComanda", cascade={"all"}, inversedBy="ide_producto")
+     * @ORM\JoinColumn(name="LineaCom_id", referencedColumnName="id")
      */
     private $id;
 
@@ -30,9 +31,32 @@ class Producto
 
     /**
      * @var float
-     * @ORM\Column(name="precio", type="decimal")
+     * @ORM\Column(name="precio", type="decimal", scale=2)
      */
     private $precio;
+
+
+    /**
+     * @var integer
+     * @ORM\Column(name="tipo", type="integer")
+     */
+    private $tipo;
+
+    /**
+     * @return int
+     */
+    public function getTipo()
+    {
+        return $this->tipo;
+    }
+
+    /**
+     * @param int $tipo
+     */
+    public function setTipo($tipo)
+    {
+        $this->tipo=$tipo;
+    }
 
 
     /**

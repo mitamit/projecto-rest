@@ -13,7 +13,8 @@ class Comanda
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @ORM\ManyToOne(targetEntity="App\Entity\LineaComanda", inversedBy="ide_comanda")
+     * @ORM\ManyToOne(targetEntity="App\Entity\LineaComanda", cascade={"all"}, inversedBy="ide_comanda")
+     * @ORM\JoinColumn(name="LineaCom_id", referencedColumnName="id")
      */
     private $id;
 

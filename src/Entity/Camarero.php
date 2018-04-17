@@ -13,7 +13,8 @@ class Camarero
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @ORM\ManyToOne(targetEntity="App\Entity\Comanda", inversedBy="ide_camarero")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Comanda", cascade={"all"}, inversedBy="ide_camarero")
+     * @ORM\JoinColumn(name="camanda_id", referencedColumnName="id")
      */
     private $id;
 
