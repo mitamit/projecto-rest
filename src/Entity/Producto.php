@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -13,8 +14,8 @@ class Producto
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @ORM\ManyToOne(targetEntity="App\Entity\LineaComanda", cascade={"all"}, inversedBy="ide_producto")
-     * @ORM\JoinColumn(name="LineaCom_id", referencedColumnName="id")
+     *
+     *
      */
     private $id;
 
@@ -43,6 +44,41 @@ class Producto
     private $tipo;
 
     /**
+     * @var string
+     * @ORM\Column(name="descripcion", type="text")
+     */
+    private $descripcion;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\LineaComanda", mappedBy="producto", cascade={"remove"})
+     */
+    private $lineasComanda;
+
+    public function __construct()
+    {
+        $this->lineasComanda = new ArrayCollection();
+    }
+
+    /**
+     * @param LineaComanda $lineaComanda
+     * @return $this
+     */
+    public function addLineaCom(\App\Entity\LineaComanda $lineaComanda)
+    {
+        $this->lineasComanda[] = $lineaComanda;
+        return $this;
+    }
+
+    /**
+     * @param LineaComanda $lineaComanda
+     *
+     */
+    public function removeLineaCom(\App\Entity\LineaComanda $lineaComanda)
+    {
+        $this->lineasComanda->removeElement($lineaComanda);
+    }
+
+    /**
      * @return int
      */
     public function getTipo()
@@ -58,12 +94,6 @@ class Producto
         $this->tipo=$tipo;
     }
 
-
-    /**
-     * @var string
-     * @ORM\Column(name="descripcion", type="text")
-     */
-    private $descripcion;
 
     /**
      * @return mixed

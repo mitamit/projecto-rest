@@ -22,18 +22,28 @@ class LineaComanda
     }
 
     /**
-     * @var integer
-     * @ORM\Column(name="ide_comanda", type="integer")
-     * @ORM\OneToMany(targetEntity="App\Entity\Comanda", mappedBy="id")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Comanda", inversedBy="lineaComandas")
      */
-    private $ide_comanda;
+    private $comanda;
 
     /**
-     * @var integer
-     * @ORM\Column(name="ide_producto", type="integer")
-     * @ORM\OneToMany(targetEntity="App\Entity\LineaComanda", mappedBy="id")
+     * @return \App\Entity\Comanda
      */
-    private $ide_producto;
+    public function getComanda()
+    {
+        return $this->comanda;
+    }
+
+    /**
+     * @param \App\Entity\Comanda $comanda
+     * @return LineaComanda
+     */
+    public function setComanda($comanda)
+    {
+        $this->comanda=$comanda;
+        return $this;
+    }
+
 
     /**
      * @var string
@@ -54,36 +64,27 @@ class LineaComanda
     private $comentario;
 
     /**
-     * @return int
+     * @ORM\ManyToOne(targetEntity="App\Entity\Producto", inversedBy="lineasComanda")
      */
-    public function getIdeComanda()
+    private $producto;
+
+    /**
+     * @return mixed
+     */
+    public function getProducto()
     {
-        return $this->ide_comanda;
+        return $this->producto;
     }
 
     /**
-     * @param int $ide_comanda
+     * @param mixed $producto
      */
-    public function setIdeComanda($ide_comanda)
+    public function setProducto($producto)
     {
-        $this->ide_comanda=$ide_comanda;
+        $this->producto=$producto;
     }
 
-    /**
-     * @return int
-     */
-    public function getIdeProducto()
-    {
-        return $this->ide_producto;
-    }
 
-    /**
-     * @param int $ide_producto
-     */
-    public function setIdeProducto($ide_producto)
-    {
-        $this->ide_producto=$ide_producto;
-    }
 
     /**
      * @return mixed
