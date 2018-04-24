@@ -47,11 +47,30 @@ class Comanda
     private $camarero;
 
     /**
-     * @return mixed
+     * @ORM\ManyToMany(targetEntity="App\Entity\Producto", mappedBy="comandas")
      */
-    public function getLineaComandas()
+    private $productos;
+    public function __construct(\App\Entity\Producto $producto)
     {
-        return $this->lineasComanda;
+        $this->productos = new ArrayCollection();
+    }
+
+    /**
+     * @param Producto $producto
+     * @return $this
+     */
+    public function addProducto(\App\Entity\Producto $producto)
+    {
+        $this->productos[] = $producto;
+        return $this;
+    }
+
+    /**
+     * @param Producto $producto
+     */
+    public function removeProducto(\App\Entity\Producto $producto)
+    {
+        $this->productos->removeElement($producto);
     }
 
     /**
@@ -100,37 +119,6 @@ class Comanda
     public function setCamarero($camarero)
     {
         $this->camarero=$camarero;
-    }
-
-
-
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\LineaComanda", mappedBy="comanda", cascade={"remove"})
-     */
-    private $lineasComanda;
-
-    public function __construct()
-    {
-        $this->lineasComanda = new ArrayCollection();
-    }
-
-    /**
-     * @param LineaComanda $lineaComanda
-     * @return $this
-     */
-    public function addLineaCom(\App\Entity\LineaComanda $lineaComanda)
-    {
-       $this->lineasComanda[] = $lineaComanda;
-       return $this;
-    }
-
-    /**
-     * @param LineaComanda $lineaComanda
-     */
-    public function removeLineaCom(\App\Entity\LineaComanda $lineaComanda)
-    {
-        $this->lineasComanda->removeElement($lineaComanda);
     }
 
     /**

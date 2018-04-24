@@ -1,18 +1,20 @@
 {% extends 'base.html.twig' %}
 {% block title %}inicio{% endblock %}
  {% block stylesheets %}
-
      <style>
-
-         a{color: #6E6E6E; text-decoration: none; font-family: fantasy;}
-
+        .ft{background-image: url("/images/rapida.jpg"); height: 600px; background-repeat: no-repeat; background-size: 100%;}
      </style>
  {% endblock %}
 
 
 
 {% block body %}
+    
+        <div class="ft">
+            <p><a href="{{ path('app_indice') }}" class="btn btn-outline-secondary" role="button" aria-pressed="true">ENTRAR</a></p>
+        </div>
 
-            <a href="{{ path('app_indice') }}">ENTRAR</a>
+
+
 
 {% endblock %}

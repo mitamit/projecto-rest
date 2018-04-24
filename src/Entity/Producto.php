@@ -15,7 +15,6 @@ class Producto
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      *
-     *
      */
     private $id;
 
@@ -50,32 +49,30 @@ class Producto
     private $descripcion;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\LineaComanda", mappedBy="producto", cascade={"remove"})
+     * @ORM\ManyToMany(targetEntity="App\Entity\Comanda", mappedBy="productos")
      */
-    private $lineasComanda;
-
+    private $comandas;
     public function __construct()
     {
-        $this->lineasComanda = new ArrayCollection();
+        $this->comandas = new ArrayCollection();
     }
 
     /**
-     * @param LineaComanda $lineaComanda
+     * @param Comanda $comanda
      * @return $this
      */
-    public function addLineaCom(\App\Entity\LineaComanda $lineaComanda)
+    public function addComanda(\App\Entity\Comanda $comanda)
     {
-        $this->lineasComanda[] = $lineaComanda;
+        $this->comandas[] = $comanda;
         return $this;
     }
 
     /**
-     * @param LineaComanda $lineaComanda
-     *
+     * @param Comanda $comanda
      */
-    public function removeLineaCom(\App\Entity\LineaComanda $lineaComanda)
+    public function removeComanda(\App\Entity\Comanda $comanda)
     {
-        $this->lineasComanda->removeElement($lineaComanda);
+        $this->comandas->removeElement($comanda);
     }
 
     /**
