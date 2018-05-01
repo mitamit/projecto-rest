@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+{% block title %}Crear comandas{% endblock %}
+{% block stylesheets %}
+
+{% endblock %}
+{% block body %}
+    <form  id="form1" method="post" action="{{ action }}" novalidate="novalidate">
+        <!-- form is based on User Entity -->
+        <!--{{ dump(form.vars.value) }} Para mostrar los datos de ese formulario. -->
+        <!-- http://stackoverflow.com/questions/12497133/directly-access-a-form-fields-value-when-overriding-widget-in-a-twig-template -->
+        <ul>
+            {% for error in form.vars.errors %}
+                <li>{{ error.message }}</li>
+            {% endfor %}
+        </ul>
+        <div class="">{{ form_errors(form.mesa) }} {{ form_label(form.mesa) }}: {{ form_widget(form.mesa) }}</div>
+        <br>
+        <div>{{ form_label(form.camarero) }}: {{ form_widget(form.camarero) }}</div>
+        <br>
+        <div>{{ form_label(form.estado) }}: {{ form_widget(form.estado) }}</div>
+        <br>
+        <div>{{ form_label(form.hamburguesas) }}: {{ form_widget(form.id) }}</div>
+        {{ form_rest(form) }} <!-- prints hidden fields and others -->
+        <br>
+        <input type="submit" value="crear"> &nbsp; &nbsp; <a href="{{ path('app_comanda') }}">Return to index</a>
+        <br>
+        <br>
+
+    </form>
+{% endblock %}

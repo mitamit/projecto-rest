@@ -2,24 +2,24 @@
 /**
  * Created by PhpStorm.
  * User: JuanMa
- * Date: 16/04/2018
- * Time: 23:52
+ * Date: 25/04/2018
+ * Time: 23:45
  */
 
 namespace App\Controller;
 
-
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
-class indiceController extends Controller
+class cocinaController extends Controller
 {
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route(path="/indice", name="app_indice")
+     * @Route(path="/cocina", name="app_cocina")
      */
-    public function indice()
+    public function cocina()
     {
-        return $this->render('indice.html.twig');
+        return $this->render('cocina.html.twig');
     }
 }
+
+

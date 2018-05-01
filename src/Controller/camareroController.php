@@ -2,24 +2,21 @@
 /**
  * Created by PhpStorm.
  * User: JuanMa
- * Date: 16/04/2018
- * Time: 23:52
+ * Date: 25/04/2018
+ * Time: 23:43
  */
 
 namespace App\Controller;
-
-
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
-class indiceController extends Controller
+class camareroController extends Controller
 {
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route(path="/indice", name="app_indice")
+     * @Route(path="/camarero", name="app_camarero")
      */
-    public function indice()
+    public function camarero()
     {
-        return $this->render('indice.html.twig');
+        return $this->render('camarero.html.twig');
     }
 }

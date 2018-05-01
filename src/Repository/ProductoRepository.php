@@ -19,6 +19,20 @@ class ProductoRepository extends ServiceEntityRepository
         parent::__construct($registry, Producto::class);
     }
 
+    /**
+     * @param $tipo
+     * @return Producto[]
+     */
+    public function findAllByTipo($tipo):array
+    {
+        $qb = $this->createQueryBuilder('p')
+            ->andWhere('p.tipo = :tipo')
+            ->setParameter('tipo', $tipo)
+            ->getQuery();
+
+        return $qb->execute();
+
+    }
 //    /**
 //     * @return Producto[] Returns an array of Producto objects
 //     */
