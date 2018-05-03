@@ -100,6 +100,11 @@ class Producto
         return $this->nombre;
     }
 
+    public function __toString()
+    {
+        return $this->nombre;
+    }
+
     /**
      * @param mixed $nombre
      */

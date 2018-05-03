@@ -24,40 +24,36 @@ class comandasController extends Controller
 {
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route(path="/comandas", name="app_comanda")
+     * @Route(path="/comandas", name="app_form_comanda")
      */
-    public function crearComanda(Request $request, EntityManagerInterface $em)
+    public function crearComanda()
     {
 
-       $produ = new Producto();
-       $produ2 = new Producto();
-       $produ2->setNombre('Cocacola');
-       $produ->setTipo(1);
-       $produ->setPrecio(6.45);
-       $produ->setDescripcion('Pizza Margarita');
-       $produ2->setTipo(3);
-        $produ2->setPrecio(1.65);
-        $produ2->setDescripcion('lata 33cl');
-       $produ->setNombre('Pizza');
-       $coman = new Comanda($produ);
-       $coman->addProducto($produ2);
-       $coman->addProducto($produ);
-       $coman->setCamarero('Andres');
-       $coman->setCamarero('Francisco');
-       $coman->setMesa(1);
-       $coman->setEstado('pendiente');
-       $a = $coman->calculaCuenta();
+       $action = $this->generateUrl('app_comanda_creando');
+       $comanda = new Comanda();
+       $form = $this->createForm(ComandaType::class, $comanda);
 
-       //$em->persist($coman);
-       //$em->flush();
-
-
-       return $this->render('crearComanda.html.twig', ['com'=> $a]);
-
+       return $this->render('crearComanda.html.twig',
+           ['action'=> $action,
+               'form'=> $form->createView()]);
     }
 
+    /**
+     *@return \Symfony\Component\HttpFoundation\Response
+     * @Route(path="/comandas/crear", name="app_comanda_creando")
+     */
 
-
+    public function hacerCrearAccion(EntityManagerInterface $em, Request $request)
+    {
+        $comanda = new Comanda();
+        $formulario = $this->createForm(ComandaType::class, $comanda);
+        $formulario->handleRequest($request);
+        if ($formulario->isValid()) {
+            $em->persist($comanda);
+            $em->flush();
+            return $this->redirectToRoute('app_camarero');
+        }
+    }
 
 
 

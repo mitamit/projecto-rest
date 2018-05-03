@@ -4,5 +4,20 @@
 
 {% endblock %}
 {% block body %}
-    <h1>{{ com }}</h1>
+<form id="form1" method="post" action="{{ action }}" novalidate="novalidate">
+    <!-- form is based on User Entity -->
+    <!--{{ dump(form.vars.value) }} Para mostrar los datos de ese formulario. -->
+    <!-- http://stackoverflow.com/questions/12497133/directly-access-a-form-fields-value-when-overriding-widget-in-a-twig-template -->
+    <ul>
+        {% for error in form.vars.errors %}
+            <li>{{ error.message }}</li>
+        {% endfor %}
+    </ul>
+
+    <div>{{ form(form) }}</div>
+
+    <br>
+    <input type="submit" value="Crear"> &nbsp; &nbsp; <a href="{{ path('app_camarero') }}">Volver</a>
+
+</form>
 {% endblock %}

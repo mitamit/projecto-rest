@@ -45,9 +45,10 @@ class Comanda
      * @ORM\ManyToMany(targetEntity="App\Entity\Producto", inversedBy="comandas", cascade="persist")
      */
     public $productos;
-    public function __construct(\App\Entity\Producto $producto)
+    public function __construct()
     {
         $this->productos = new ArrayCollection();
+        $this->estado = 'En preparación';
     }
 
     /**
