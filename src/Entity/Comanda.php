@@ -28,11 +28,6 @@ class Comanda
      */
     private $estado;
 
-    /**
-     * @var double
-     * @ORM\Column(name="cuenta", type="decimal", scale=2)
-     */
-    private $cuenta;
 
     /**
      * @var integer
@@ -47,9 +42,9 @@ class Comanda
     private $camarero;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Producto", mappedBy="comandas")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Producto", inversedBy="comandas", cascade="persist")
      */
-    private $productos;
+    public $productos;
     public function __construct(\App\Entity\Producto $producto)
     {
         $this->productos = new ArrayCollection();
@@ -74,20 +69,18 @@ class Comanda
     }
 
     /**
-     * @return float
+     *@param Producto $producto
      */
-    public function getCuenta()
+    public function calculaCuenta()
     {
-        return $this->cuenta;
+        $cuenta = 0;
+        foreach($this->productos as $prod)
+        {
+            $cuenta = $cuenta + $prod->getPrecio();
+        }
+        return $cuenta;
     }
 
-    /**
-     * @param float $cuenta
-     */
-    public function setCuenta($cuenta)
-    {
-        $this->cuenta=$cuenta;
-    }
 
     /**
      * @return int

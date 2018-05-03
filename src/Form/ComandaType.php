@@ -27,7 +27,7 @@ class ComandaType extends AbstractType
             ->add('mesa', IntegerType::class, array('label'=> 'Num. Mesa:', 'error_bubbling'=>true))
             ->add('camarero', TextType::class, array('label'=>'Camarero: ', 'error_bubbling'=>true))
             ->add('estado', TextType::class,  array('label'=>'Estado de la comanda: ', 'error_bubbling'=>true))
-                ->add('id', EntityType::class, array('label'=>'Hamburguesas', 'error_bubbling'=>true,
+                ->add('productos', EntityType::class, array('label'=>'Hamburguesas', 'error_bubbling'=>true,
                     'class' => Producto::class,
                     'query_builder' => function(ProductoRepository $repo) {
                         return $repo->findAllByTipo(1);},
