@@ -16,6 +16,7 @@ use Doctrine\ORM\QueryBuilder;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 
+use Symfony\Component\Form\ChoiceList\Factory\ChoiceListFactoryInterface;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -33,9 +34,27 @@ class ComandaType extends AbstractType
             ->add('mesa', IntegerType::class, array('label'=> 'Num. Mesa:', 'error_bubbling'=>true))
             ->add('camarero', TextType::class, array('label'=>'Camarero: ', 'error_bubbling'=>true))
             ->add('productos', EntityType::class, array(
-                'class'=> Producto::class,
+                'label'         => 'Hamburguesas',
+                'class'         => Producto::class,
+                'query_builder' => function(ProductoRepository $repo1){
+                    return $repo1->createQueryBuilder('p')->where('p.tipo = :tipo')
+                        ->setParameter('tipo', '1');git
+                }))
+            ->add('productos', EntityType::class, array(
+                'label'         => 'Acompañamiento',
+                'class'         => Producto::class,
+                'query_builder' => function(ProductoRepository $repo2){
+                    return $repo2->createQueryBuilder('p')->where('p.tipo = :tipo')
+                        ->setParameter('tipo', '2');
+                }))
+            ->add('productos', EntityType::class, array(
+                'label'         => 'Bebida',
+                'class'         => Producto::class,
+                'query_builder' => function(ProductoRepository $repo3){
+                    return $repo3->createQueryBuilder('p')->where('p.tipo = :tipo')
+                        ->setParameter('tipo', '3');
+                }))
 
-            ))
             ->add('save', SubmitType::class, array('label' => 'añadir'))
     ;
     }
