@@ -19,4 +19,15 @@ class camareroController extends Controller
     {
         return $this->render('camarero.html.twig');
     }
+
+    /**
+     *@return \Symfony\Component\HttpFoundation\Response
+     * @Route(path="/mesas", name="app_mesas")
+     */
+    public function camareroComanda()
+    {
+        return $this->render('mesas.html.twig');
+    }
+
+
 }

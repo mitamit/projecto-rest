@@ -2,24 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="028debe6-69df-4dcb-b81f-a202c730bb34" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/listaComandas.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/mesas.html.twig" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/public/images/buzz-ie.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/images/photo1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/camareroController.php" afterPath="$PROJECT_DIR$/src/Controller/camareroController.php" />
       <change beforePath="$PROJECT_DIR$/src/Controller/comandasController.php" afterPath="$PROJECT_DIR$/src/Controller/comandasController.php" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Comanda.php" afterPath="$PROJECT_DIR$/src/Entity/Comanda.php" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Producto.php" afterPath="$PROJECT_DIR$/src/Entity/Producto.php" />
       <change beforePath="$PROJECT_DIR$/src/Form/ComandaType.php" afterPath="$PROJECT_DIR$/src/Form/ComandaType.php" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ProductoType.php" afterPath="$PROJECT_DIR$/src/Form/ProductoType.php" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20180424214759.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20180503132516.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20180503133343.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20180503140213.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20180503151826.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20180503152234.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" afterPath="$PROJECT_DIR$/templates/base.html.twig" />
       <change beforePath="$PROJECT_DIR$/templates/camarero.html.twig" afterPath="$PROJECT_DIR$/templates/camarero.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/cocina.html.twig" afterPath="$PROJECT_DIR$/templates/cocina.html.twig" />
       <change beforePath="$PROJECT_DIR$/templates/crearComanda.html.twig" afterPath="$PROJECT_DIR$/templates/crearComanda.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/producto.html.twig" afterPath="$PROJECT_DIR$/templates/producto.html.twig" />
+      <change beforePath="$PROJECT_DIR$/templates/listaComandas.html.twig" afterPath="$PROJECT_DIR$/templates/listaComandas.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,20 +39,18 @@
       <file leaf-file-name="ComandaType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Form/ComandaType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="32" column="163" lean-forward="false" selection-start-line="32" selection-start-column="163" selection-end-line="32" selection-end-column="163" />
-              <folding>
-                <element signature="e#109#133#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="35">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crearproducto.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/crearproducto.html.twig">
+      <file leaf-file-name="crearComanda.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/crearComanda.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+            <state relative-caret-position="136">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,8 +59,18 @@
       <file leaf-file-name="comandasController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/comandasController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="45" column="38" lean-forward="false" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+            <state relative-caret-position="154">
+              <caret line="68" column="59" lean-forward="false" selection-start-line="68" selection-start-column="59" selection-end-line="68" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mesas.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/mesas.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,8 +89,8 @@
       <file leaf-file-name="Comanda.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Comanda.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
-              <caret line="35" column="7" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+            <state relative-caret-position="239">
+              <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -97,8 +99,18 @@
       <file leaf-file-name="camarero.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/camarero.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+            <state relative-caret-position="170">
+              <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="camareroController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/camareroController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="19" column="51" lean-forward="false" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -107,87 +119,57 @@
       <file leaf-file-name="listaComandas.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/listaComandas.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="19" column="92" lean-forward="false" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
+            <state relative-caret-position="68">
+              <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
               <folding>
-                <element signature="e#288#294#0#HTML" expanded="true" />
-                <element signature="e#294#300#0#HTML" expanded="true" />
-                <element signature="e#300#306#0#HTML" expanded="true" />
-                <element signature="e#306#312#0#HTML" expanded="true" />
-                <element signature="e#312#318#0#HTML" expanded="true" />
-                <element signature="e#318#324#0#HTML" expanded="true" />
-                <element signature="e#324#330#0#HTML" expanded="true" />
-                <element signature="e#330#336#0#HTML" expanded="true" />
-                <element signature="e#336#342#0#HTML" expanded="true" />
-                <element signature="e#342#348#0#HTML" expanded="true" />
-                <element signature="e#352#358#0#HTML" expanded="true" />
-                <element signature="e#358#364#0#HTML" expanded="true" />
-                <element signature="e#364#370#0#HTML" expanded="true" />
-                <element signature="e#370#376#0#HTML" expanded="true" />
-                <element signature="e#376#382#0#HTML" expanded="true" />
-                <element signature="e#428#434#0#HTML" expanded="true" />
-                <element signature="e#434#440#0#HTML" expanded="true" />
-                <element signature="e#440#446#0#HTML" expanded="true" />
-                <element signature="e#446#452#0#HTML" expanded="true" />
-                <element signature="e#452#458#0#HTML" expanded="true" />
-                <element signature="e#458#464#0#HTML" expanded="true" />
-                <element signature="e#547#553#0#HTML" expanded="true" />
-                <element signature="e#553#559#0#HTML" expanded="true" />
-                <element signature="e#559#565#0#HTML" expanded="true" />
-                <element signature="e#565#571#0#HTML" expanded="true" />
-                <element signature="e#571#577#0#HTML" expanded="true" />
-                <element signature="e#577#583#0#HTML" expanded="true" />
-                <element signature="e#741#747#0#HTML" expanded="true" />
-                <element signature="e#747#753#0#HTML" expanded="true" />
-                <element signature="e#753#759#0#HTML" expanded="true" />
-                <element signature="e#759#765#0#HTML" expanded="true" />
-                <element signature="e#765#771#0#HTML" expanded="true" />
-                <element signature="e#771#777#0#HTML" expanded="true" />
-                <element signature="e#777#783#0#HTML" expanded="true" />
-                <element signature="e#783#789#0#HTML" expanded="true" />
-                <element signature="e#789#795#0#HTML" expanded="true" />
-                <element signature="e#795#801#0#HTML" expanded="true" />
-                <element signature="e#952#958#0#HTML" expanded="true" />
-                <element signature="e#959#965#0#HTML" expanded="true" />
-                <element signature="e#1031#1037#0#HTML" expanded="true" />
-                <element signature="e#1037#1043#0#HTML" expanded="true" />
-                <element signature="e#1043#1049#0#HTML" expanded="true" />
-                <element signature="e#1049#1055#0#HTML" expanded="true" />
-                <element signature="e#1055#1061#0#HTML" expanded="true" />
-                <element signature="e#1061#1067#0#HTML" expanded="true" />
+                <element signature="e#357#363#0#HTML" expanded="true" />
+                <element signature="e#363#369#0#HTML" expanded="true" />
+                <element signature="e#369#375#0#HTML" expanded="true" />
+                <element signature="e#375#381#0#HTML" expanded="true" />
+                <element signature="e#381#387#0#HTML" expanded="true" />
+                <element signature="e#387#393#0#HTML" expanded="true" />
+                <element signature="e#397#403#0#HTML" expanded="true" />
+                <element signature="e#403#409#0#HTML" expanded="true" />
+                <element signature="e#409#415#0#HTML" expanded="true" />
+                <element signature="e#415#421#0#HTML" expanded="true" />
+                <element signature="e#421#427#0#HTML" expanded="true" />
+                <element signature="e#473#479#0#HTML" expanded="true" />
+                <element signature="e#479#485#0#HTML" expanded="true" />
+                <element signature="e#485#491#0#HTML" expanded="true" />
+                <element signature="e#491#497#0#HTML" expanded="true" />
+                <element signature="e#497#503#0#HTML" expanded="true" />
+                <element signature="e#503#509#0#HTML" expanded="true" />
+                <element signature="e#592#598#0#HTML" expanded="true" />
+                <element signature="e#598#604#0#HTML" expanded="true" />
+                <element signature="e#604#610#0#HTML" expanded="true" />
+                <element signature="e#610#616#0#HTML" expanded="true" />
+                <element signature="e#616#622#0#HTML" expanded="true" />
+                <element signature="e#622#628#0#HTML" expanded="true" />
+                <element signature="e#786#792#0#HTML" expanded="true" />
+                <element signature="e#792#798#0#HTML" expanded="true" />
+                <element signature="e#798#804#0#HTML" expanded="true" />
+                <element signature="e#804#810#0#HTML" expanded="true" />
+                <element signature="e#810#816#0#HTML" expanded="true" />
+                <element signature="e#816#822#0#HTML" expanded="true" />
+                <element signature="e#1048#1054#0#HTML" expanded="true" />
+                <element signature="e#1054#1060#0#HTML" expanded="true" />
+                <element signature="e#1060#1066#0#HTML" expanded="true" />
+                <element signature="e#1066#1072#0#HTML" expanded="true" />
+                <element signature="e#1072#1078#0#HTML" expanded="true" />
+                <element signature="e#1078#1084#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cocina.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/cocina.html.twig">
+      <file leaf-file-name="Mesa.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Mesa.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Camarero.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Camarero.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="59" column="28" lean-forward="false" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+            <state relative-caret-position="222">
+              <caret line="82" column="37" lean-forward="false" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
               <folding>
                 <element signature="e#30#78#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -201,7 +183,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Controller/indexController.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Mesa.php" />
         <option value="$PROJECT_DIR$/src/Entity/LineaComanda.php" />
         <option value="$PROJECT_DIR$/config/routes.yaml" />
         <option value="$PROJECT_DIR$/templates/Restaurante/indice.html.twig" />
@@ -211,7 +192,6 @@
         <option value="$PROJECT_DIR$/public/css/hero.css" />
         <option value="$PROJECT_DIR$/templates/inicio.html.twig" />
         <option value="$PROJECT_DIR$/Form/ComandaType.php" />
-        <option value="$PROJECT_DIR$/src/Controller/camareroController.php" />
         <option value="$PROJECT_DIR$/src/Controller/cocinaController.php" />
         <option value="$PROJECT_DIR$/Form/ProductoType.php" />
         <option value="$PROJECT_DIR$/templates/crearproducto.html.twig" />
@@ -222,14 +202,17 @@
         <option value="$PROJECT_DIR$/src/Form/ProductoType.php" />
         <option value="$PROJECT_DIR$/templates/producto.html.twig" />
         <option value="$PROJECT_DIR$/templates/indice.html.twig" />
-        <option value="$PROJECT_DIR$/templates/crearComanda.html.twig" />
-        <option value="$PROJECT_DIR$/templates/camarero.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/comandasController.php" />
         <option value="$PROJECT_DIR$/templates/cocina.html.twig" />
-        <option value="$PROJECT_DIR$/src/Form/ComandaType.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Comanda.php" />
         <option value="$PROJECT_DIR$/src/Entity/Camarero.php" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Comanda.php" />
+        <option value="$PROJECT_DIR$/templates/mesas.html.twig" />
+        <option value="$PROJECT_DIR$/templates/crearComanda.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/comandasController.php" />
+        <option value="$PROJECT_DIR$/templates/camarero.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/camareroController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Mesa.php" />
+        <option value="$PROJECT_DIR$/src/Form/ComandaType.php" />
         <option value="$PROJECT_DIR$/templates/listaComandas.html.twig" />
       </list>
     </option>
@@ -242,8 +225,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="749" />
-    <option name="width" value="624" />
+    <option name="x" value="678" />
+    <option name="width" value="695" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -295,6 +278,17 @@
             <path>
               <item name="project-res1" type="b2602c69:ProjectViewProjectNode" />
               <item name="project-res1" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="project-res1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-res1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="project-res1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-res1" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="project-res1" type="b2602c69:ProjectViewProjectNode" />
@@ -353,16 +347,16 @@
     <property name="node.js.selected.package.eslint" value="" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\project-res1\templates\images" />
+      <recent name="C:\project-res1\public\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\project-res1\src" />
       <recent name="C:\project-res1\templates\Restaurante" />
       <recent name="C:\project-res1\public" />
       <recent name="C:\project-res1\public\images" />
       <recent name="C:\project-res1\templates\images" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\project-res1\templates\images" />
-      <recent name="C:\project-res1\public\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -432,18 +426,18 @@
       <workItem from="1525857832157" duration="4883000" />
       <workItem from="1525876800542" duration="7987000" />
       <workItem from="1525896669262" duration="10013000" />
-      <workItem from="1525958245661" duration="9900000" />
+      <workItem from="1525958245661" duration="13874000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202070000" />
+    <option name="totallyTimeSpent" value="206044000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19667171" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16490166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -496,7 +490,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Entity/Camarero.php" />
     <entry file="file://$PROJECT_DIR$/templates/Restaurante/inicio.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/Entity/Mesa.php" />
     <entry file="file://$PROJECT_DIR$/src/Controller/indiceController.php">
@@ -545,7 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Mesa.php" />
     <entry file="file://$PROJECT_DIR$/src/Entity/LineaComanda.php" />
     <entry file="file://$PROJECT_DIR$/config/routes.yaml">
       <provider selected="true" editor-type-id="text-editor">
@@ -615,6 +607,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -653,14 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/camareroController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/inicio.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -672,14 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/crearComanda.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -707,38 +684,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/comandasController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="45" column="38" lean-forward="false" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ComandaType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="32" column="163" lean-forward="false" selection-start-line="32" selection-start-column="163" selection-end-line="32" selection-end-column="163" />
-          <folding>
-            <element signature="e#109#133#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/camarero.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Camarero.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="59" column="28" lean-forward="false" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
           <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
+            <element signature="e#30#78#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -759,64 +710,112 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/camarero.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mesas.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/camareroController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="19" column="51" lean-forward="false" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/crearComanda.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Comanda.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="35" column="7" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+        <state relative-caret-position="239">
+          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Mesa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="82" column="37" lean-forward="false" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/ComandaType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/comandasController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="68" column="59" lean-forward="false" selection-start-line="68" selection-start-column="59" selection-end-line="68" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/listaComandas.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="92" lean-forward="false" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
+        <state relative-caret-position="68">
+          <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
           <folding>
-            <element signature="e#288#294#0#HTML" expanded="true" />
-            <element signature="e#294#300#0#HTML" expanded="true" />
-            <element signature="e#300#306#0#HTML" expanded="true" />
-            <element signature="e#306#312#0#HTML" expanded="true" />
-            <element signature="e#312#318#0#HTML" expanded="true" />
-            <element signature="e#318#324#0#HTML" expanded="true" />
-            <element signature="e#324#330#0#HTML" expanded="true" />
-            <element signature="e#330#336#0#HTML" expanded="true" />
-            <element signature="e#336#342#0#HTML" expanded="true" />
-            <element signature="e#342#348#0#HTML" expanded="true" />
-            <element signature="e#352#358#0#HTML" expanded="true" />
-            <element signature="e#358#364#0#HTML" expanded="true" />
-            <element signature="e#364#370#0#HTML" expanded="true" />
-            <element signature="e#370#376#0#HTML" expanded="true" />
-            <element signature="e#376#382#0#HTML" expanded="true" />
-            <element signature="e#428#434#0#HTML" expanded="true" />
-            <element signature="e#434#440#0#HTML" expanded="true" />
-            <element signature="e#440#446#0#HTML" expanded="true" />
-            <element signature="e#446#452#0#HTML" expanded="true" />
-            <element signature="e#452#458#0#HTML" expanded="true" />
-            <element signature="e#458#464#0#HTML" expanded="true" />
-            <element signature="e#547#553#0#HTML" expanded="true" />
-            <element signature="e#553#559#0#HTML" expanded="true" />
-            <element signature="e#559#565#0#HTML" expanded="true" />
-            <element signature="e#565#571#0#HTML" expanded="true" />
-            <element signature="e#571#577#0#HTML" expanded="true" />
-            <element signature="e#577#583#0#HTML" expanded="true" />
-            <element signature="e#741#747#0#HTML" expanded="true" />
-            <element signature="e#747#753#0#HTML" expanded="true" />
-            <element signature="e#753#759#0#HTML" expanded="true" />
-            <element signature="e#759#765#0#HTML" expanded="true" />
-            <element signature="e#765#771#0#HTML" expanded="true" />
-            <element signature="e#771#777#0#HTML" expanded="true" />
-            <element signature="e#777#783#0#HTML" expanded="true" />
-            <element signature="e#783#789#0#HTML" expanded="true" />
-            <element signature="e#789#795#0#HTML" expanded="true" />
-            <element signature="e#795#801#0#HTML" expanded="true" />
-            <element signature="e#952#958#0#HTML" expanded="true" />
-            <element signature="e#959#965#0#HTML" expanded="true" />
-            <element signature="e#1031#1037#0#HTML" expanded="true" />
-            <element signature="e#1037#1043#0#HTML" expanded="true" />
-            <element signature="e#1043#1049#0#HTML" expanded="true" />
-            <element signature="e#1049#1055#0#HTML" expanded="true" />
-            <element signature="e#1055#1061#0#HTML" expanded="true" />
-            <element signature="e#1061#1067#0#HTML" expanded="true" />
+            <element signature="e#357#363#0#HTML" expanded="true" />
+            <element signature="e#363#369#0#HTML" expanded="true" />
+            <element signature="e#369#375#0#HTML" expanded="true" />
+            <element signature="e#375#381#0#HTML" expanded="true" />
+            <element signature="e#381#387#0#HTML" expanded="true" />
+            <element signature="e#387#393#0#HTML" expanded="true" />
+            <element signature="e#397#403#0#HTML" expanded="true" />
+            <element signature="e#403#409#0#HTML" expanded="true" />
+            <element signature="e#409#415#0#HTML" expanded="true" />
+            <element signature="e#415#421#0#HTML" expanded="true" />
+            <element signature="e#421#427#0#HTML" expanded="true" />
+            <element signature="e#473#479#0#HTML" expanded="true" />
+            <element signature="e#479#485#0#HTML" expanded="true" />
+            <element signature="e#485#491#0#HTML" expanded="true" />
+            <element signature="e#491#497#0#HTML" expanded="true" />
+            <element signature="e#497#503#0#HTML" expanded="true" />
+            <element signature="e#503#509#0#HTML" expanded="true" />
+            <element signature="e#592#598#0#HTML" expanded="true" />
+            <element signature="e#598#604#0#HTML" expanded="true" />
+            <element signature="e#604#610#0#HTML" expanded="true" />
+            <element signature="e#610#616#0#HTML" expanded="true" />
+            <element signature="e#616#622#0#HTML" expanded="true" />
+            <element signature="e#622#628#0#HTML" expanded="true" />
+            <element signature="e#786#792#0#HTML" expanded="true" />
+            <element signature="e#792#798#0#HTML" expanded="true" />
+            <element signature="e#798#804#0#HTML" expanded="true" />
+            <element signature="e#804#810#0#HTML" expanded="true" />
+            <element signature="e#810#816#0#HTML" expanded="true" />
+            <element signature="e#816#822#0#HTML" expanded="true" />
+            <element signature="e#1048#1054#0#HTML" expanded="true" />
+            <element signature="e#1054#1060#0#HTML" expanded="true" />
+            <element signature="e#1060#1066#0#HTML" expanded="true" />
+            <element signature="e#1066#1072#0#HTML" expanded="true" />
+            <element signature="e#1072#1078#0#HTML" expanded="true" />
+            <element signature="e#1078#1084#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

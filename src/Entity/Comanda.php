@@ -22,10 +22,11 @@ class Comanda
      * @ORM\Column(name="estado", type="text")
      */
     private $estado;
+
     /**
-     * @var integer
-     * @ORM\Column(name="mesa", type="integer")
+     *@ORM\ManyToOne(targetEntity="Mesa", inversedBy="comandas")
      */
+
     private $mesa;
 
     /**

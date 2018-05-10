@@ -1,14 +1,16 @@
 {% extends 'base.html.twig' %}
 {% block title %}lista{% endblock %}
 {% block stylesheets %}
-
+    <style>
+        body{background-color: lightyellow;}
+    </style>
 {% endblock %}
     {% block body %}
         <h2>Comandas</h2>
         <table class="table-responsive table-hover bg-warning">
             <thead>
             <tr>
-                <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mesa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mesa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                 <th scope="col">Camarero&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                 <th scope="col">Pedidos</th>
                 <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estado</th>
@@ -17,10 +19,10 @@
             <tbody>
         {% for comanda in comandas %}
             <tr>
-                <th scope="row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ comanda.mesa }}</th>
+                <th scope="row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ comanda.mesa.numero }}</th>
                 <td>{{ comanda.camarero }}</td>
                 <td>{% for com in comanda.productos %}
-                        &nbsp;·&nbsp;{{com}}
+                        · {{com}}
                     {% endfor %}</td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ comanda.estado }}</td>
             </tr>
