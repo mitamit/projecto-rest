@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block title %}lista{% endblock %}
+{% block stylesheets %}
+
+{% endblock %}
+    {% block body %}
+        <h2>Comandas</h2>
+        <table class="table-responsive table-hover bg-warning">
+            <thead>
+            <tr>
+                <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mesa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th scope="col">Camarero&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th scope="col">Pedidos</th>
+                <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estado</th>
+            </tr>
+            </thead>
+            <tbody>
+        {% for comanda in comandas %}
+            <tr>
+                <th scope="row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ comanda.mesa }}</th>
+                <td>{{ comanda.camarero }}</td>
+                <td>{% for com in comanda.productos %}
+                        &nbsp;·&nbsp;{{com}}
+                    {% endfor %}</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ comanda.estado }}</td>
+            </tr>
+        {% endfor %}
+            </tbody>
+        </table>
+
+
+
+
+
+        <br><br>
+        <a href="{{ path('app_cocina') }}" name="volver">Volver</a>
+
+    {% endblock %}

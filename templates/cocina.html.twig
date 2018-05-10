@@ -5,7 +5,8 @@
 {% endblock %}
 {% block body %}
 
-    <a href="#" class="btn btn-outline-info btn-lg btn-block" role="button" aria-pressed="true">LISTAR COMANDAS</a><br>
+    <a href="{{ path('app_listar_comanda') }}" class="btn btn-outline-info btn-lg btn-block" role="button" aria-pressed="true">LISTAR COMANDAS</a><br>
     <a href="{{ path('app_producto') }}" class="btn btn-outline-info btn-lg btn-block" role="button" aria-pressed="true">PRODUCTOS</a><br>
+    <a href="{{ path('app_indice') }}">Volver</a>
 
 {% endblock %}

@@ -9,6 +9,8 @@
 namespace App\Form;
 
 use App\Entity\Producto;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -23,7 +25,7 @@ class ProductoType extends AbstractType
         $builder
             ->add('nombre', TextType::class, ['error_bubbling' => true])
             ->add('precio', TextType::class, ['error_bubbling' => true]) /*El error building es para tratar los errores de los campos como errores del fomrulario.*/
-            ->add('tipo', TextType::class, ['error_bubbling' => true])
+            ->add('tipo', IntegerType::class, ['error_bubbling' => true,])
             ->add('descripcion', TextType::class, ['error_bubbling' => true])
         ;
     }

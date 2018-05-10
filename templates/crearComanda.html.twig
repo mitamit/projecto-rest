@@ -1,23 +1,33 @@
 {% extends 'base.html.twig' %}
-{% block title %}Crear comandas{% endblock %}
+
+{% block title %}Crear Comanda{% endblock %}
 {% block stylesheets %}
 
 {% endblock %}
 {% block body %}
-<form id="form1" method="post" action="{{ action }}" novalidate="novalidate">
-    <!-- form is based on User Entity -->
-    <!--{{ dump(form.vars.value) }} Para mostrar los datos de ese formulario. -->
-    <!-- http://stackoverflow.com/questions/12497133/directly-access-a-form-fields-value-when-overriding-widget-in-a-twig-template -->
-    <ul>
-        {% for error in form.vars.errors %}
-            <li>{{ error.message }}</li>
-        {% endfor %}
-    </ul>
+    <form id="form1" method="post" action="{{ action }}" novalidate="novalidate">
+        <!-- form is based on User Entity -->
+        <!--{{ dump(form.vars.value) }} Para mostrar los datos de ese formulario. -->
+        <!-- http://stackoverflow.com/questions/12497133/directly-access-a-form-fields-value-when-overriding-widget-in-a-twig-template -->
+        <ul>
+            {% for error in form.vars.errors %}
+                <li>{{ error.message }}</li>
+            {% endfor %}
+        </ul>
 
-    <div>{{ form(form) }}</div>
+        <div>{{ form_errors(form.mesa) }} {{ form_label(form.mesa) }}: {{ form_widget(form.mesa) }}</div>
+        <br>
+        <div>{{ form_label(form.camarero) }}: {{ form_widget(form.camarero) }}</div>
+        <br>
+        <div>{{ form_label(form.prod1) }}: {{ form_widget(form.prod1) }}</div>
+        <br>
+        <div>{{ form_label(form.prod2) }}: {{ form_widget(form.prod2) }}</div>
+        <br>
+        <div>{{ form_label(form.prod3) }}: {{ form_widget(form.prod3) }}</div>
+        <br>
+        <input type="submit" value="Crear"> &nbsp; &nbsp; <a href="{{ path('app_camarero') }}">Volver</a>
+        <br>
+        <br>
 
-    <br>
-    <input type="submit" value="Crear"> &nbsp; &nbsp; <a href="{{ path('app_camarero') }}">Volver</a>
-
-</form>
+    </form>
 {% endblock %}
