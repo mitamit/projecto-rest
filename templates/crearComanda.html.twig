@@ -24,7 +24,7 @@
         <br>
         <div>{{ form_label(form.prod3) }}: {{ form_widget(form.prod3, { 'attr': {'class': 'form-control'} }) }}</div>
         <br>
-        <input type="submit" value="Crear"> &nbsp; &nbsp; <a href="{{ path('app_camarero') }}">Volver</a>
+        {{ form_widget(form.save, { 'attr': {'class': 'btn btn-primary btn-lg btn-block'} }) }}&nbsp; &nbsp; <a href="{{ path('app_camarero') }}">Volver</a>
         <br>
         <br>
 
