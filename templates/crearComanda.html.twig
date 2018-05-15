@@ -16,13 +16,13 @@
         </ul>
 
 
-        <div>{{ form_label(form.camarero) }}: {{ form_widget(form.camarero) }}</div>
+        <div>{{ form_label(form.camarero) }}: {{ form_widget(form.camarero, { 'attr': {'class': 'form-control'} }) }}</div>
         <br>
-        <div>{{ form_label(form.prod1) }}: {{ form_widget(form.prod1) }}</div>
+        <div>{{ form_label(form.prod1) }}: {{ form_widget(form.prod1, { 'attr': {'class': 'form-control'} }) }}</div>
         <br>
-        <div>{{ form_label(form.prod2) }}: {{ form_widget(form.prod2) }}</div>
+        <div>{{ form_label(form.prod2) }}: {{ form_widget(form.prod2, { 'attr': {'class': 'form-control'} }) }}</div>
         <br>
-        <div>{{ form_label(form.prod3) }}: {{ form_widget(form.prod3) }}</div>
+        <div>{{ form_label(form.prod3) }}: {{ form_widget(form.prod3, { 'attr': {'class': 'form-control'} }) }}</div>
         <br>
         <input type="submit" value="Crear"> &nbsp; &nbsp; <a href="{{ path('app_camarero') }}">Volver</a>
         <br>
