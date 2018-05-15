@@ -1,11 +1,28 @@
 {% extends 'base.html.twig' %}
 {% block title %}Camarero{% endblock %}
 {% block stylesheets %}
-
+        <style>
+            a{text-decoration: none;}
+        </style>
 {% endblock %}
 {% block body %}
-    <h2>OPCIONES de COMANDAS</h2>
-    <a href="{{ path('app_mesas') }}" class="btn btn-outline-info btn-lg btn-block" role="button" aria-pressed="true">CREAR</a><br>
-    <a href="{{ path('app_listar_comandaC') }}" class="btn btn-outline-info btn-lg btn-block" role="button" aria-pressed="true">LISTA COMANDAS</a><br>
-    <a href="{{ path('app_indice') }}">Volver</a>
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+                <h4 class="text-white">OPCIONES de COMANDAS</h4>
+                <span class="text-muted"><a href="{{ path('app_mesas') }}" aria-pressed="">CREAR</a></span>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+
+    <h2>OPCIONES</h2>
+   <br>
+    <a href="{{ path('app_mesas') }}" class="'btn btn-dark btn-lg btn-block" role="button" aria-pressed="true">CREAR</a>
+    <a href="{{ path('app_listar_comandaC') }}" class="'btn btn-dark btn-lg btn-block" role="button" aria-pressed="true">LISTA COMANDAS</a><br>
+    <a href="{{ path('app_indice') }}" class="'btn btn-dark btn-lg btn-block" role="button" aria-pressed="true">Volver</a>
 {% endblock %}

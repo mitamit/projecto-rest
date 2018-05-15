@@ -14,6 +14,7 @@ use App\Repository\ProductoRepository;
 
 
 use Doctrine\ORM\QueryBuilder;
+use function Sodium\add;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 
@@ -36,7 +37,8 @@ class ComandaType extends AbstractType
                     return $repo3->createQueryBuilder('p')->where('p.tipo = :tipo')->setParameter('tipo', '2');
                 }))->add('prod3', EntityType::class, array('label'=>'Bebidas', 'class'=>Producto::class, 'query_builder'=>function (ProductoRepository $repo3) {
                     return $repo3->createQueryBuilder('p')->where('p.tipo = :tipo')->setParameter('tipo', '3');
-                }));
+                }))->add('save', SubmitType::class, array('label' => 'Crear comanda'));
+
 
     }
 
