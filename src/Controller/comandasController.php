@@ -68,10 +68,66 @@ class comandasController extends Controller
 
     public function actionListar(EntityManagerInterface $em)
     {
+        $estado = "En preparación";
         //$em = $this->getDoctrine()->getManager(); es lo mismo que entitymanagerInterface $em
         $comandaRepo=$em->getRepository(Comanda::class);
-        $comanda=$comandaRepo->findAll();
+
+        $comanda=$comandaRepo->findbyEstado($estado);
         return $this->render('listaComandas.html.twig', ['comandas'=>$comanda]);
+    }
+
+    /**
+     * @param EntityManagerInterface $em
+     * @param Request $request
+     *  @Route(path="/comandas/cambia/{id}", name="app_cambia_estado")
+     */
+    public function actionCambiaEstado(EntityManagerInterface $em, Request $request, $id)
+    {
+        $e= "Listo";
+        $estat = "En preparación";
+        $em = $this->getDoctrine()->getManager();
+        $repository = $em->getRepository(Comanda::class);
+        $estado = $repository->find($id)->setEstado($e);
+
+
+        $em->flush();
+        $comandaRepo=$em->getRepository(Comanda::class);
+        $comanda = $comandaRepo->findbyEstado($estat);
+        return $this->redirectToRoute("app_listar_comanda", ['comandas' => $comanda]);
+
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     *  @Route(path="/comandas/listacamarero", name="app_listar_comandaC")
+     */
+
+    public function actionListarCam(EntityManagerInterface $em)
+    {
+        $estado = "Listo";
+        //$em = $this->getDoctrine()->getManager(); es lo mismo que entitymanagerInterface $em
+        $comandaRepo=$em->getRepository(Comanda::class);
+
+        $comanda=$comandaRepo->findbyEstado($estado);
+        return $this->render('listaComandasCam.html.twig', ['comandas'=>$comanda]);
+    }
+
+    /**
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Route(path="/comandas/comandaBorrar/{id}", name="app_borra")
+     */
+    public function actionBorrar($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $comandaRepo = $em->getRepository(Comanda::class);
+        $comanda = $comandaRepo->find($id);
+
+        $em->remove($comanda);
+        $em->flush();
+
+        return $this->redirectToRoute('app_listar_comandaC');
+
     }
 
 }

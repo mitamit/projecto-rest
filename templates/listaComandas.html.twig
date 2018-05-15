@@ -1,19 +1,25 @@
 {% extends 'base.html.twig' %}
+{% block refresh %}
+    <meta http-equiv="refresh" content="5" >
+{% endblock %}
 {% block title %}lista{% endblock %}
 {% block stylesheets %}
     <style>
-        body{background-color: lightyellow;}
+        h2{text-align: center;}
+        body{background-color:whitesmoke;}
     </style>
 {% endblock %}
     {% block body %}
-        <h2>Comandas</h2>
-        <table class="table-responsive table-hover bg-warning">
-            <thead>
+        <h2>Lista de Pedidos</h2>
+        <div class="table-responsive">
+        <table class="table table-hover">
+            <thead class="thead-dark">
             <tr>
                 <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mesa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                 <th scope="col">Camarero&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                 <th scope="col">Pedidos</th>
                 <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estado</th>
+                <th scope="col">            </th>
             </tr>
             </thead>
             <tbody>
@@ -25,12 +31,12 @@
                         · {{com}}
                     {% endfor %}</td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ comanda.estado }}</td>
+                <td><a href="{{ path('app_cambia_estado', {'id':comanda.id}) }}" class="btn btn-outline-warning btn-sm" role="button" aria-pressed="true">Listo</a></td>
             </tr>
         {% endfor %}
             </tbody>
         </table>
-
-
+        </div>
 
 
 

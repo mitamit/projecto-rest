@@ -5,7 +5,30 @@
 {% endblock %}
 {% block body %}
     <div>
-        <a href="{{ path('app_form_comanda', {'numeromesa': 1})}}"><img src="/images/mesa1.jpg"></a>
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+                <a href="{{ path('app_form_comanda', {'numeromesa': 1})}}" class="thumbnail">
+                    <img src="/images/images.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <a href="{{ path('app_form_comanda', {'numeromesa': 1})}}" class="thumbnail">
+                    <img src="/images/images.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <a href="{{ path('app_form_comanda', {'numeromesa': 1})}}" class="thumbnail">
+                    <img src="/images/images.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <a href="{{ path('app_form_comanda', {'numeromesa': 1})}}" class="thumbnail">
+                    <img src="/images/images.jpg" alt="">
+                </a>
+            </div>
+            ...
+        </div>
 
     </div>
+
 {% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+{% block refresh %}
+    <meta http-equiv="refresh" content="5" >
+{% endblock %}
+{% block title %}lista{% endblock %}
+{% block stylesheets %}
+    <style>
+        h2{text-align: center;}
+        body{background-color:whitesmoke;}
+    </style>
+{% endblock %}
+    {% block body %}
+        <div class="col-xs-16 col-sm-6 col-md-8">
+        <h2>Lista de Pedidos</h2>
+
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mesa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th scope="col">Pedidos</th>
+                    <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estado</th>
+                    <th scope="col">            </th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for comanda in comandas %}
+                    <tr>
+                        <th scope="row">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ comanda.mesa.numero }}</th>
+                        <td>{% for com in comanda.productos %}
+                                · {{com}}
+                            {% endfor %}</td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ comanda.estado }}</td>
+                        <td><a href="{{ path('app_borra', {'id':comanda.id}) }}" class="btn btn-outline-warning btn-sm" role="button" aria-pressed="true">Eliminar</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+
+        <br><br>
+        <a href="{{ path('app_cocina') }}" name="volver">Volver</a>
+        </div>
+    {% endblock %}
