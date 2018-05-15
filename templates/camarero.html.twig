@@ -2,15 +2,19 @@
 {% block title %}Camarero{% endblock %}
 {% block stylesheets %}
         <style>
-            a{text-decoration: none;}
+            .jumbotron{height: 38%; background-image: url("/images/cam.png"); background-repeat: no-repeat; background-size: 100% 100%}
+            a{color: #ffa500; font-family: Ebrima;}
+            h2{color: #ffa500; font-weight: bold; font-family: Ebrima; display: flex; justify-content: center;}
+            h4{ font-family: Ebrima; font-size: 1.5em;}
         </style>
 {% endblock %}
 {% block body %}
     <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
             <div class="bg-dark p-4">
-                <h4 class="text-white">OPCIONES de COMANDAS</h4>
-                <span class="text-muted"><a href="{{ path('app_mesas') }}" aria-pressed="">CREAR</a></span>
+                <h4 class="text-white">MENÚ</h4>
+                <span class="text-muted"><a href="{{ path('app_cocina') }}" aria-pressed="">Cocina</a></span>&nbsp;&nbsp;&nbsp;
+                <span class="text-muted"><a href="{{ path('app_inicio') }}" aria-pressed="">Salir</a></span>
             </div>
         </div>
         <nav class="navbar navbar-dark bg-dark">
@@ -21,8 +25,12 @@
     </div>
 
     <h2>OPCIONES</h2>
-   <br>
-    <a href="{{ path('app_mesas') }}" class="'btn btn-dark btn-lg btn-block" role="button" aria-pressed="true">CREAR</a>
-    <a href="{{ path('app_listar_comandaC') }}" class="'btn btn-dark btn-lg btn-block" role="button" aria-pressed="true">LISTA COMANDAS</a><br>
-    <a href="{{ path('app_indice') }}" class="'btn btn-dark btn-lg btn-block" role="button" aria-pressed="true">Volver</a>
+    <div class="jumbotron">
+
+    </div>
+
+
+    <a href="{{ path('app_mesas') }}" class="'btn btn-dark btn-lg btn-block" role="button"  aria-pressed="true">CREAR</a>
+    <a href="{{ path('app_listar_comandaC') }}" class="'btn btn-dark btn-lg btn-block" role="button" aria-pressed="true">LISTA PEDIDOS</a><br>
+    <a href="{{ path('app_indice') }}" class="'btn btn-dark btn-lg btn-block" role="button" aria-pressed="true">VOLVER</a>
 {% endblock %}

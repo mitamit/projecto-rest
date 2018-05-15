@@ -1,19 +1,25 @@
 {% extends 'base.html.twig' %}
 {% block refresh %}
-    <meta http-equiv="refresh" content="5" >
+    <meta http-equiv="refresh" content="10" >
 {% endblock %}
 {% block title %}lista{% endblock %}
 {% block stylesheets %}
     <style>
-        h2{text-align: center;}
+        h2{text-align: center; color: #ffa500; font-weight: bold;}
         body{background-color:whitesmoke;}
+        a{color: #ffa500; font-family: Ebrima;}
+        h4{font-family: Ebrima;}
     </style>
 {% endblock %}
     {% block body %}
         <div class="pos-f-t">
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="bg-dark p-4">
-                    <h4 class="text-white"><a href="{{ path('app_camarero') }}" name="volver"><span class="text-muted">VOLVER</span></a></h4>
+                    <h4 class="text-white">OPCIONES</h4>
+                    <span class="text-muted"><a href="{{ path('app_cocina') }}" aria-pressed="">Cocina</a></span>&nbsp;&nbsp;&nbsp;
+                    <span class="text-muted"><a href="{{ path('app_camarero') }}" aria-pressed="">Volver</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="text-muted"><a href="{{ path('app_inicio') }}" aria-pressed="">Salir</a></span>
 
                 </div>
             </div>
@@ -24,7 +30,7 @@
             </nav>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-8">
-        <h2>Lista de Pedidos</h2>
+        <br><h2>LISTA PEDIDOS</h2>
 
         <div class="table-responsive">
             <table class="table table-hover">
@@ -44,7 +50,7 @@
                                 · {{com}}
                             {% endfor %}</td>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ comanda.estado }}</td>
-                        <td><a href="{{ path('app_borra', {'id':comanda.id}) }}" class="btn btn-outline-warning btn-sm" role="button" aria-pressed="true">Eliminar</a></td>
+                        <td><a href="{{ path('app_borra', {'id':comanda.id}) }}" class="btn btn-dark  btn-block" role="button" aria-pressed="true">ELIMINAR</a></td>
                     </tr>
                 {% endfor %}
                 </tbody>
