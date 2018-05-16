@@ -35,6 +35,11 @@ class Comanda
     private $camarero;
 
     /**
+     * @ORM\Column(name="precio", type="decimal", scale=2, nullable=true)
+     */
+    private $precio;
+
+    /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Producto", inversedBy="comandas", cascade="persist")
      */
     private $productos;
@@ -110,6 +115,7 @@ class Comanda
         {
             $cuenta = $cuenta + $prod->getPrecio();
         }
+        $this->precio = $cuenta;
         return $cuenta;
     }
     /**
@@ -169,6 +175,22 @@ class Comanda
     public function setCamarero($camarero)
     {
         $this->camarero=$camarero;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrecio()
+    {
+        return $this->precio;
+    }
+
+    /**
+     * @param mixed $precio
+     */
+    public function setPrecio($precio)
+    {
+        $this->precio=$precio;
     }
 
 

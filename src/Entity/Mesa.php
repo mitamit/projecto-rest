@@ -23,6 +23,11 @@ class Mesa
     private $numero;
 
     /**
+     * @ORM\Column(name="cuenta", type="decimal", scale=2)
+     */
+    private $cuenta;
+
+    /**
      * @ORM\OneToMany(targetEntity="Comanda", mappedBy="mesa", cascade={"remove"})
      */
     private $comandas;
@@ -50,6 +55,24 @@ class Mesa
     {
         $this->numero = $numero;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCuenta()
+    {
+        return $this->cuenta;
+    }
+
+    /**
+     * @param mixed $cuenta
+     */
+    public function setCuenta($cuenta)
+    {
+        $this->cuenta=$cuenta;
+    }
+
+
     /**
      * @return mixed
      */
@@ -64,7 +87,7 @@ class Mesa
     {
         $this->comandas = $comandas;
     }
-    public function calcularPrecio()
+    public function calculaPrecio()
     {
         $cuenta = 0;
         foreach($this->comandas as $comanda)
@@ -72,6 +95,7 @@ class Mesa
             $cuenta = $cuenta + $comanda->calculaCuenta();
         }
         $this->comandas = [];
+        $this->cuenta = $cuenta;
         return $cuenta;
     }
     /**

@@ -12,7 +12,7 @@
     <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
             <div class="bg-dark p-4">
-                <h4 class="text-white">MENÚ</h4>
+                <h4 class="text-white">OPCIONES</h4>
                 <span class="text-muted"><a href="{{ path('app_cocina') }}" aria-pressed="">Cocina</a></span>&nbsp;&nbsp;&nbsp;
                 <span class="text-muted"><a href="{{ path('app_inicio') }}" aria-pressed="">Salir</a></span>
             </div>
@@ -24,13 +24,14 @@
         </nav>
     </div>
 
-    <h2>OPCIONES</h2>
+    <h2>CAMARERO</h2>
     <div class="jumbotron">
 
     </div>
 
 
-    <a href="{{ path('app_mesas') }}" class="'btn btn-dark btn-lg btn-block" role="button"  aria-pressed="true">CREAR</a>
-    <a href="{{ path('app_listar_comandaC') }}" class="'btn btn-dark btn-lg btn-block" role="button" aria-pressed="true">LISTA PEDIDOS</a><br>
-    <a href="{{ path('app_indice') }}" class="'btn btn-dark btn-lg btn-block" role="button" aria-pressed="true">VOLVER</a>
+    <a href="{{ path('app_mesas') }}" class="btn btn-dark btn-lg btn-block" role="button" aria-pressed="true">CREAR</a>
+    <a href="{{ path('app_listar_comandaC') }}" class="btn btn-dark btn-lg btn-block" role="button" aria-pressed="true">LISTA</a><br>
+    <a href="{{ path('app_cuenta') }}" class="btn btn-dark btn-lg btn-block" role="button" aria-pressed="true">CUENTA</a><br>
+
 {% endblock %}
