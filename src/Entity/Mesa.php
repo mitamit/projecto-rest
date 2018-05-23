@@ -28,7 +28,8 @@ class Mesa
     private $cuenta;
 
     /**
-     * @ORM\OneToMany(targetEntity="Comanda", mappedBy="mesa")
+     * @ORM\OneToMany(targetEntity="Comanda", mappedBy="mesa", cascade="persist")
+     *
      */
     private $comandas;
     public function __construct()
@@ -119,7 +120,7 @@ class Mesa
 
     public function removeComandas()
     {
-       $this->comandas = New ArrayCollection();
+       $this->getComandas()->clear();
        return $this;
     }
 

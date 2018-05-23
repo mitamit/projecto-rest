@@ -36,7 +36,7 @@ class Cuenta extends Controller
         $repository = $m->getRepository(Mesa::class);
         $mesa = $repository->find($numeromesa);
         $comandas = $mesa->getComandas();
-        $comandarray = New ArrayCollection();
+        $comandarray = array();
 
         foreach ($comandas as $comanda) {
                 if($comanda->getEstado() == $estado)
@@ -59,19 +59,27 @@ class Cuenta extends Controller
      * @Route(path="/vaciar/mesa/{numeromesa}", name="app_vaciar_mesa")
      */
 
-    public function vaciarMesa($numeromesa){
+    public function vaciarMesa($numeromesa, EntityManagerInterface $em)
+    {
+
+        $estado='Servida';
+        $nuevo ='Pagado';
+
+        $em=$this->getDoctrine()->getManager();
+        $repo=$em->getRepository(Mesa::class);
+        $mesa=$repo->find($numeromesa);
+        $comandas=$mesa->getComandas();
 
 
-        $m = $this->getDoctrine()->getManager();
-        $repo = $m->getRepository(Mesa::class);
-        $mesa = $repo->find($numeromesa);
+        foreach ($comandas as $comanda) {
+            if($comanda->getEstado() == $estado){
+              $comanda->setEstado($nuevo);
+            }
+        }
 
-        $mesa->removeComandas();
 
 
-
-        $m->persist($mesa);
-        $m->flush();
+        $em->flush();
 
         return $this->redirectToRoute('app_camarero');
 
