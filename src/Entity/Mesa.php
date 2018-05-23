@@ -28,7 +28,7 @@ class Mesa
     private $cuenta;
 
     /**
-     * @ORM\OneToMany(targetEntity="Comanda", mappedBy="mesa", cascade={"remove"})
+     * @ORM\OneToMany(targetEntity="Comanda", mappedBy="mesa")
      */
     private $comandas;
     public function __construct()
@@ -80,19 +80,23 @@ class Mesa
     {
         return $this->comandas;
     }
+
     /**
      * @param mixed $comandas
      */
+
     public function setComandas($comandas)
     {
         $this->comandas = $comandas;
     }
+
     public function calculaPrecio()
     {
         $cuenta = 0;
-        foreach($this->comandas as $comanda)
-        {
-            $cuenta = $cuenta + $comanda->calculaCuenta();
+        foreach($this->comandas as $comanda) {
+            if ($comanda->getEstado() == 'Servida') {
+                $cuenta=$cuenta + $comanda->calculaCuenta();
+            }
         }
         $this->comandas = [];
         $this->cuenta = $cuenta;
@@ -107,6 +111,18 @@ class Mesa
         $this->comandas[] = $comanda;
         return $this;
     }
+
+    /**
+     * @return $this
+     *
+     */
+
+    public function removeComandas()
+    {
+       $this->comandas = New ArrayCollection();
+       return $this;
+    }
+
 
     public function __toString()
     {

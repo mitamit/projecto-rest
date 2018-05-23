@@ -8,7 +8,8 @@
 
 namespace App\Controller;
 
-
+use Doctrine\Common\Collections\ArrayCollection;
+use App\Entity\Comanda;
 use App\Entity\Mesa;
 use Doctrine\ORM\EntityManagerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -28,16 +29,51 @@ class Cuenta extends Controller
      * @return \Symfony\Component\HttpFoundation\Response
      * @Route(path="/cuenta/mesa{numeromesa}", name="app_cuenta_mesa")
      */
-    public function calcularCuenta(EntityManagerInterface $em, $numeromesa)
+    public function calcularCuenta($numeromesa)
     {
+        $estado = 'Servida';
         $m = $this->getDoctrine()->getManager();
         $repository = $m->getRepository(Mesa::class);
         $mesa = $repository->find($numeromesa);
         $comandas = $mesa->getComandas();
+        $comandarray = New ArrayCollection();
+
+        foreach ($comandas as $comanda) {
+                if($comanda->getEstado() == $estado)
+                $comandarray[] = $comanda;
+        }
+
+
         $cuentatotal = $mesa->calculaPrecio();
+
+        $m->flush();
+
         return $this->render('cuenta.html.twig',
-            ['comandas' => $comandas,
+            ['comandas' => $comandarray,
+                'mesa'  => $mesa,
                 'cuentatotal' => $cuentatotal]);
     }
 
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route(path="/vaciar/mesa/{numeromesa}", name="app_vaciar_mesa")
+     */
+
+    public function vaciarMesa($numeromesa){
+
+
+        $m = $this->getDoctrine()->getManager();
+        $repo = $m->getRepository(Mesa::class);
+        $mesa = $repo->find($numeromesa);
+
+        $mesa->removeComandas();
+
+
+
+        $m->persist($mesa);
+        $m->flush();
+
+        return $this->redirectToRoute('app_camarero');
+
+    }
 }

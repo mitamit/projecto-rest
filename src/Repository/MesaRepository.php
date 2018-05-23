@@ -19,6 +19,20 @@ class MesaRepository extends ServiceEntityRepository
         parent::__construct($registry, Mesa::class);
     }
 
+
+
+    public function findByNum($numero)
+    {
+
+        $qb = $this->createQueryBuilder('p')
+            ->andWhere('p.numero = :numero')
+            ->setParameter('numero', $numero)
+            ->getQuery();
+        return $qb->execute();
+
+    }
+
+
 //    /**
 //     * @return Mesa[] Returns an array of Mesa objects
 //     */

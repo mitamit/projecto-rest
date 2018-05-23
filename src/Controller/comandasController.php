@@ -122,9 +122,10 @@ class comandasController extends Controller
         $em = $this->getDoctrine()->getManager();
         $comandaRepo = $em->getRepository(Comanda::class);
         $comanda = $comandaRepo->find($id);
+        $comanda->setEstado('Servida');
 
-        $em->remove($comanda);
         $em->flush();
+
 
         return $this->redirectToRoute('app_listar_comandaC');
 
