@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+    {% block title %}Camarero{% endblock %}
+    {% block stylesheets %}
+
+    {% endblock %}
+{% block body %}
+    <form id="form1" method="post" action="{{ path('app_producto_haceractualizar', {'id': producto.id}) }}" novalidate="novalidate">
+        <ul>
+            {% for error in form.vars.errors %}
+                <li>{{ error.message }}</li>
+            {% endfor %}
+        </ul>
+        <div>{{ form_errors(form.nombre) }} {{ form_label(form.nombre) }}: {{ form_widget(form.nombre) }}</div>
+        <br>
+        <div>{{ form_label(form.precio) }}: {{ form_widget(form.precio) }}</div>
+        <br>
+        <div>{{ form_label(form.tipo) }}: {{ form_widget(form.tipo) }}</div>
+        <br>
+        <div>{{ form_label(form.descripcion) }}: {{ form_widget(form.descripcion) }}</div>
+        {{ form_rest(form) }} <!-- prints hidden fields and others -->
+        <br>
+        <input type="submit" value="Actualizar">&nbsp;&nbsp;&nbsp;<a href="{{ path('app_producto_listar') }}">Volver</a>
+    </form>
+{% endblock %}

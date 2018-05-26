@@ -15,7 +15,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class Cuenta extends Controller
+class CuentaController extends Controller
 {
     /**
      * @return \Symfony\Component\HttpFoundation\Response
