@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-    {% block title %}cuenta{% endblock %}
+    {% block title %}Cuenta{% endblock %}
     {% block stylesheets %}
         <style>
 
@@ -7,7 +7,7 @@
             #b{font-weight: bold; color: #313131;}
             #a{background-color: red; color: white; padding-left: 2em;}
             a{color: #ffa500; font-family: Ebrima;}
-            h2{color: #ffa500; font-weight: bold; display: flex; justify-content: center; font-family: Ebrima;}
+            h2{color: #ffa500; font-weight: bold; display: flex; justify-content: center; font-family: Showcard Gothic;}
            .badge{background-color: #313131; font-family: Ebrima; }
             #d{border-top: #313131 solid 2px; font-weight: bold; color: #313131; }
             #e{font-size: 0.8em;}
@@ -40,11 +40,12 @@
             <span class="badge badge-primary badge-pill" id="c">{{ comanda.id }}</span>
         </li>
         {% for producto in comanda.productos %}
-
-            <li class="list-group-item d-flex justify-content-between align-items-center" id="e">
+            {% if producto.nombre != "Nada" %}
+                <li class="list-group-item d-flex justify-content-between align-items-center" id="e">
                 {{ producto.nombre }}
                 <span class="badge badge-primary badge-pill">€ {{ producto.precio }}</span>
             </li>
+            {% endif %}
         {% endfor %}
             <li class="list-group-item d-flex justify-content-between align-items-center">
             TOTAL PEDIDO

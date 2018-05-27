@@ -31,8 +31,8 @@ class ComandaType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('camarero', EntityType::class, array('label'=>'Camarero', 'class'=>Camarero::class,))->add('prod1', EntityType::class, array('label'=>'Hamburguesa', 'class'=>Producto::class, 'query_builder'=>function (ProductoRepository $repo3) {
-                    return $repo3->createQueryBuilder('p')->where('p.tipo = :tipo')->setParameter('tipo', '1');
+        $builder->add('camarero', EntityType::class, array('label'=>'Camarero', 'class'=>Camarero::class,))
+            ->add('prod1', EntityType::class, array('label'=>'Hamburguesa', 'class'=>Producto::class, 'query_builder'=>function (ProductoRepository $repo3) {return $repo3->createQueryBuilder('p')->where('p.tipo = :tipo')->setParameter('tipo', '1');
                 }))->add('prod2', EntityType::class, array('label'=>'Complementos', 'class'=>Producto::class, 'query_builder'=>function (ProductoRepository $repo3) {
                     return $repo3->createQueryBuilder('p')->where('p.tipo = :tipo')->setParameter('tipo', '2');
                 }))->add('prod3', EntityType::class, array('label'=>'Bebidas', 'class'=>Producto::class, 'query_builder'=>function (ProductoRepository $repo3) {

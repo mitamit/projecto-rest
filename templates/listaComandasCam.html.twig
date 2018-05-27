@@ -2,7 +2,7 @@
 {% block refresh %}
     <meta http-equiv="refresh" content="10" >
 {% endblock %}
-{% block title %}lista{% endblock %}
+{% block title %}Camarero | Lista Pedidos{% endblock %}
 {% block stylesheets %}
     <style>
         #s{font-weight: bold; color: #313131;}
@@ -10,7 +10,7 @@
         #c{background-color: #313131;}
         #b{font-weight: bold; color: whitesmoke; background-color: #999999;}
         #e{font-family: Ebrima; font-size: 0.8em; }
-        h2{text-align: center; color: #ffa500; font-weight: bold;}
+        h2{text-align: center; color: #ffa500; font-weight: bold; font-family: Showcard Gothic;}
         body{background-color:whitesmoke;}
         a{color: #ffa500; font-family: Ebrima;}
         h4{font-family: Ebrima;}
@@ -50,7 +50,11 @@
 
 
                     <li class="list-group-item d-flex justify-content-between align-items-center" id="e">
-                    {% for com in comanda.productos %}{{ com }}· {% endfor %}
+                    {% for com in comanda.productos %}
+                        {% if com.nombre != "Nada" %}
+                            · {{ com }}
+                        {% endif %}
+                    {% endfor %}
                     </li>
 
                 <li class="list-group-item d-flex justify-content-between align-items-center" id="s">
